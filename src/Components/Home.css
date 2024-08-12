@@ -1,0 +1,58 @@
+:root {
+  --primary: #fcdac3;
+  --secondary: #DCA47C;
+  --tertiary: #FCF8F3;
+  --quaternary: #698474;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 89vh;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.images img {
+  max-width: 500px;
+  height: 300px;
+  border-radius: 50px;
+  margin: 30px;
+}
+
+.text {
+  width: 100%;
+}
+
+.text h1 {
+  margin: 0 0 20px 0;
+  color: var(--quaternary);
+}
+
+.text button {
+  background-color: var(--quaternary);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.text button:hover {
+  box-shadow: 10px 5px 5px red;
+}
+
+.about {
+  color: var(--quaternary);
+  text-align: center;
+}

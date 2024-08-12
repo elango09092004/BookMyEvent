@@ -1,0 +1,69 @@
+:root {
+    --primary: #fcdac3;
+    --secondary: #DCA47C;
+    --tertiary: #FCF8F3;
+    --quaternary: #698474;
+  }
+  
+  .signin {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: var(--primary);
+      position: inherit;
+  }
+  
+  .signin h1 {
+      margin-bottom: 20px;
+      color: var(--quaternary);
+      text-align: center;
+  }
+  
+  .signin div {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+  }
+  
+  .signin .box {
+      margin-top: 100px;
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      border: solid burlywood 4px;
+  }
+  .inputdiv{
+  align-items: center;
+ margin-left: 30px;
+  }
+  
+  .signin input {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      font-size: 16px;
+     
+  }
+  
+  .button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: var(--quaternary);
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+      background-color: var(--secondary);
+  }
+  
