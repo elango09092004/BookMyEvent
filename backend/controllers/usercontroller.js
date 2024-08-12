@@ -4,7 +4,7 @@ const usermodel=require("../models/usermodel")
 exports.signup=async(req,res)=>{
     try{
         const {name,email,password,role}=req.body
-        const user=await usermodel.findOne(email);
+        const user=await usermodel.findOne({email});
         if(user){
             return res.status(400).json({message:"Email already exists"})
         }
