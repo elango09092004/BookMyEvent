@@ -8,6 +8,7 @@ app.use(cors());
 //routes
 const userroutes=require("./routes/userroutes")
 const eventroutes=require("./routes/eventroutes")
+const bookingroutes=require("./routes/bookingroute")
 
 //mongodb connection
 mongoose.connect("mongodb://localhost:27017/bookMyEvent")
@@ -15,7 +16,8 @@ mongoose.connect("mongodb://localhost:27017/bookMyEvent")
     .catch(err => console.error('Could not connect to MongoDB... ', err));
 
     app.use("/signup",userroutes);
-    app.use("/event",eventroutes)
+    app.use("/event",eventroutes);
+    app.use("/bookings",bookingroutes)
 
 
 

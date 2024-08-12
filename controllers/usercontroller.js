@@ -8,6 +8,7 @@ exports.signup=async(req,res)=>{
         if(user){
             return res.status(400).json({message:"Email already exists"})
         }
+        console.log(user)
         const newuser=await usermodel.create({name,email,password,role})
         res.status(201).json({message:"User created successfully",newuser})
         newuser.save();
