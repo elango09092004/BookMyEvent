@@ -6,7 +6,7 @@ const addEvent = async (req, res) => {
     try {
         const { title, description, dateTime, location, organizer, category, capacity, ticketPricing, imageUrl, status } = req.body;
 
-        const existingEvent = await Event.findOne({ title: title.trim() });
+        const existingEvent = await Event.findOne({ title: title});
 
         if (existingEvent) {
             return res.status(400).json({
@@ -44,6 +44,17 @@ const addEvent = async (req, res) => {
     }
 };
 
+const getEvents = async (req, res) => {
+    try {
+        const events = await Event.find();
+        res.status(200).json(events);
+    } catch (error) {
+        res.status(500).json({
+            message: "Failed to retrieve events",
+            error: error.message
+        });
+    }
+};
 module.exports = {
-    addEvent
+    addEvent,getEvents
 };

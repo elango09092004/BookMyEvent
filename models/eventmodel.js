@@ -25,8 +25,7 @@ const eventSchema = new mongoose.Schema({
         trim: true
     },
     organizer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user', 
+       type: String,
         required: true
     },
     category: {
@@ -49,7 +48,7 @@ const eventSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['Draft', 'Published', 'Cancelled'],
+        enum: ['Postponed', 'Scheduled', 'Cancelled'],
         default: 'Draft'
     }
 }, {
